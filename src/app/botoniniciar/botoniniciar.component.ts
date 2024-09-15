@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-botoniniciar',
   templateUrl: './botoniniciar.component.html',
   styleUrls: ['./botoniniciar.component.scss'],
 })
-export class BotoniniciarComponent  implements OnInit {
+export class BotoniniciarComponent {
+  isModalOpen = false;
 
-  constructor() { }
-
-  ngOnInit() {}
-
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
 }

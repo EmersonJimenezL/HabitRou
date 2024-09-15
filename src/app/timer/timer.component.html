@@ -1,0 +1,45 @@
+<div class="overlay-global" *ngIf="isTimerRunning">
+  <div class="centered-timer">
+    <div class="circle">
+      <svg>
+        <circle cx="50%" cy="50%" r="45%"></circle>
+        <circle cx="50%" cy="50%" r="45%" [style.strokeDashoffset]="strokeDashoffset"></circle>
+      </svg>
+      <div class="time-display">{{ displayTime }}</div>
+    </div>
+  </div>
+</div>
+
+
+<ion-card *ngIf="!isTimerRunning">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-item class="bgtransparent">
+          <ion-input [(ngModel)]="hours" type="number" min="0"></ion-input>Hr
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-item>
+
+          <ion-input [(ngModel)]="minutes" type="number" min="0" max="59"></ion-input>M
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-item>
+
+          <ion-input [(ngModel)]="seconds" type="number" min="0" max="59"></ion-input>S
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="color: white; background-color: #598987;">
+        <ion-button expand="full" (click)="startTimer()">Iniciar</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-card>

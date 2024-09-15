@@ -1,7 +1,0 @@
-{
-  "name": "HabitRou",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}

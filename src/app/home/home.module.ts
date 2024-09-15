@@ -7,6 +7,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { BotoniniciarComponent } from '../botoniniciar/botoniniciar.component'
+import { TimerComponent } from '../timer/timer.component'
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { BotoniniciarComponent } from '../botoniniciar/botoniniciar.component'
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, BotoniniciarComponent],
+  declarations: [HomePage, BotoniniciarComponent, TimerComponent],
 })
 export class HomePageModule { }
